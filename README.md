@@ -1,37 +1,34 @@
 # Study Helper
 
-## [Video Demo](https://youtu.be/_UIyW3o8BJw)
+## [Video Demo](https://youtu.be/YZLX66BVPFg)
 
 ### Description:
-This project is a BMI (Body Mass Index) calculator, which allows users to easily calculate their BMI based on weight and height inputs. The web application not only computes the BMI but also provides additional insights into how much weight needs to be gained or lost to achieve a healthy BMI range. The project was created as part of CS50, Harvard University's Introduction to Computer Science course, and demonstrates fundamental skills in web development, HTML/CSS, JavaScript, and algorithm design.
+This project is a simple task manager, which allows users to add tasks, mark added tasks as completed, view all the tasks. After the user choose to exit the program, the program will create a new txt file on all of the logs. The project was created as part of CS50's introduction to programming with python, that teaches beginners how to write code in the wonderful language of python.
 
 ### How the Program Works:
-The web application interface consists of two input fields: one for the user's weight in kilograms and one for their height in meters. Once the user inputs their data and clicks the "Calculate" button, the program calculates the BMI using the formula: `bmi = kg / m^2`.
-
-The program then displays the result and, if the BMI indicates underweight or overweight, provides an additional calculation showing how much weight the user should gain or lose to reach a normal BMI range.
+The Task Manager program allows users to create, view, and manage tasks. Each task has a name, due date, priority level, and a completion status. The program uses a simple menu interface where users can add tasks, view all tasks sorted by priority, and mark tasks as complete. Before the user exits, the program saves all tasks to a tasks.txt file, which is overwritten each time the program restarts, so it only includes tasks from the current session.
 
 ### Project Files:
-- `index.html`: Contains the structure of the web page and input fields for weight and height.
-- `app.js`: Handles BMI calculation, user input validation, and provides weight adjustment feedback.
-- `styles.css`: Contains the styling for the web page, ensuring a clean and user-friendly design.
+- `project.py`: Contains the python code of the project.
+- `test_project.py`: A pytest implemention code of the project.
 
 ### Design Choices:
-I chose JavaScript for the BMI calculation due to its ability to efficiently handle user inputs and dynamically update the page. For styling, I kept the interface minimalistic to make the tool easy to use for all types of users.
+There really isn't much of a design in the file. It operates on the terminal window
 
 ### Features:
-- Calculates BMI from user input.
-- Provides suggestions for weight adjustments to achieve a normal BMI.
-- Validates input to prevent errors or unrealistic entries.
-- User-friendly interface with clear instructions and results display.
+- Create tasks.
+- View tasks.
+- Mark tasks as completed.
+- Output's the logs in a tasks.txt file.
 
 ### Challenges:
-The most challenging part of the project was creating accurate weight gain/loss suggestions based on BMI results. Through testing and research, I was able to refine the algorithm and improve user feedback.
+The most challenging part of the project was keeping track of the tasks and assigning each task an unique id.
 
 ### Installation:
 After downloading the project repository, navigate to the folder using the terminal:
 
 ```
-$ cd bmi_calculator
+$ cd task_manager
 ```
 Open VScode in the directory:
 
@@ -39,16 +36,10 @@ Open VScode in the directory:
 $ code .
 ```
 
-Use the Live Server extension to run the application locally. Click "Go Live" in the bottom right corner of VS Code, and the application will open in your browser.
+You need to have python extension installed. Open new terminal from the options at the top. Run the program using python project.py or python3 project.py or py project.py
 
 ### Usage:
-Once the program is running, input your weight and height, and click "Calculate BMI" to see your results.
-
-### Interface:
-![Interface Image](https://github.com/mahdihasan7/bmi_calculator/blob/main/images/sample%20interface.png)
-
-After providing inputs:
-![Output Image](https://github.com/mahdihasan7/bmi_calculator/blob/main/images/sample%20output.png)
+Once the program is running, you will see a bunch of options 1, 2, 3, 4 with options what you wish to do.
 
 >[!IMPORTANT]
-> The program only accepts kilograms for weight and meters for height.
+> The program must be run at terminal window.
